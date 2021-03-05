@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+    <addon id="repository.argonremote" name="Argon One Configuration" version="0.0.1" provider-name="Argon40Tech">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Argon One Configuration">
+            <info compressed="false">https://raw.githubusercontent.com/Argon40Tech/argonremote/libreelec/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Argon40Tech/argonremote/libreelec/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Argon40Tech/argonremote/libreelec/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Argon One Configuration</summary>
+            <description>Argon One Configuration</description>
+            <platform>linux</platform>
+    </extension>
+</addon>
+
+<addon id="script.service.argonforty-device" name="ArgonForty Device Configuration" version="0.0.1" provider-name="ArgonForty">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="virtual.rpi-tools" />
+        <import addon="virtual.system-tools" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="main.py" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">ArgonForty Device Configuration</summary>
+        <description lang="en_GB">Install services to manage ArgonForty Devices such as power button and fan speed. This will also enable gpio-ir, i2c and UART.
+
+        * Disable then Enable Service for settings to take effect (or reboot)
+        </description>
+        <language></language>
+        <platform>linux</platform>
+        <license>MIT</license>
+        <forum></forum>
+        <website>argon40.com</website>
+        <email>cs@argon40.com</email>
+        <source></source>
+        <news></news>
+        <disclaimer></disclaimer>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+</addons>
